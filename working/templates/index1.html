@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style1.css') }}">
+    <title>E-Voting Platform</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to E-Voting Platform</h1>
+        <form action="/vote1" method="get">
+            <label for="election">Select Election:</label>
+            <select name="election" required>
+                <option value="General Election 2025">General Election 2025</option>
+                <option value="State Election 2025">State Election 2025</option>
+            </select>
+            <button type="submit">Proceed to Vote</button>
+        </form>
+    </div>
+</body>
+</html>

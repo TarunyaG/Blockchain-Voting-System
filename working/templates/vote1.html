@@ -1,0 +1,41 @@
+<!-- /templates/vote.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style1.css') }}">
+    <script src="{{ url_for('static', filename='js/script1.js') }}"></script>
+    <title>Vote Now</title>
+</head>
+<body>
+    <div class="container">
+        <h1>{{ election }} - Vote Now</h1>
+        <form action="/vote1" method="post">
+            <input type="hidden" name="election" value="{{ election }}">
+            <div class="grid-container">
+                <label class="vote-box">
+                    <input type="radio" name="candidate" value="Party A" required>
+                    <img src="{{ url_for('static', filename='images/1.jpeg') }}" alt="Party A">
+                    <p>Party A - Candidate 1</p>
+                </label>
+                <label class="vote-box">
+                    <input type="radio" name="candidate" value="Party B">
+                    <img src="{{ url_for('static', filename='images/2.png') }}" alt="Party B">
+                    <p>Party B - Candidate 2</p>
+                </label>
+                <label class="vote-box">
+                    <input type="radio" name="candidate" value="Party C">
+                    <img src="{{ url_for('static', filename='images/3.png') }}" alt="Party C">
+                    <p>Party C - Candidate 3</p>
+                </label>
+                <label class="vote-box">
+                    <input type="radio" name="candidate" value="Party D">
+                    <img src="{{ url_for('static', filename='images/4.jpeg') }}" alt="Party D">
+                    <p>Party D - Candidate 4</p>
+                </label>
+            </div>
+            <button type="submit" class="btn-confirm">Confirm Vote</button>
+        </form>
+        
+    </div>
+</body>
+</html>
